@@ -1,3 +1,12 @@
+:root {
+    --card_width: 250px;
+    --row_increment: 10px;
+    --card_border_radius: 16px;
+    --card_small: 26;
+    --card_medium: 33;
+    --card_large: 45;
+    --card_vincent: 48;
+}
 /* navbar */
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -18,12 +27,7 @@ body{
     margin-right: 30px;
 }
 
-/* utility */
-.tombol{
-    border-radius: 35px;
-    height: fit-content;
-    text-transform: uppercase;
-}
+
 
 /* jumbotron */
 .jumbotron{
@@ -50,7 +54,7 @@ body{
 }
 
 .jumbotron .container h1{
-    font-size: 75px;
+    font-size: 32px;
     text-shadow: 2.5px 2.5px 2.5px #311E59;
     letter-spacing: 5px;
 }
@@ -81,7 +85,7 @@ body{
 .info-panel{
     box-shadow: 0 3px 20px rgba(0,0,0,0.5);
     border-radius: 12px;
-    margin-top: -60px;
+    margin-top: -100px;
     background-color: #9023D9;
     position: relative;
     z-index: 1;
@@ -119,7 +123,7 @@ body{
     justify-content: center;
 }
 .present-logo{
-    height: 75px;
+    height: 45px;
     filter: brightness(0) invert(1);
     margin-top: 40px;
     margin-bottom: 40px;
@@ -129,10 +133,10 @@ body{
     text-align: center;
 }
 .teks h4{
-    margin-top: 10px;
+    margin-top: 30px;
     text-transform: uppercase;
     font-weight: lighter;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .teks h4 span{
@@ -140,38 +144,67 @@ body{
     /* font-family: viga; */
 }
 .teks p{
-    font-size: 20px;
-}
-
-/* testi */
-.testi{
-    margin-top: 80px;
-    background-size: cover;
-    width: 100%;
-
-    /* margin-bottom: 15px; */
+    font-size: 16px;
 }
 
 .testi h1{
     font-family: 'carousel', sans-serif;
-    font-size: 75px;
+    font-size: 42px;
     text-shadow: 2.5px 2.5px 2.5px #311E59;
     letter-spacing: 5px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
-.testi .row{
+.pin_container {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+
     background-color: #311E59;
 }
-.testi .card{
+
+.card {
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
     background-color: #AD1FBF;
-    width: 90%;
-    margin-left: 5%;
 }
 
+.card_small {
+    grid-row-end: span var(--card_small);
+}
+
+.card_medium {
+    grid-row-end: span var(--card_medium);
+}
+
+.card_large {
+    grid-row-end: span var(--card_large);
+}
+
+.card_vincent {
+    grid-row-end: span var(--card_vincent);
+}
+
+.card_vincent img {
+    border-radius: 16px 16px 0px 0px;
+}
+
+.card_vincent footer{
+    color: white;
+}
 .footer{
-    color: #9023D9;
+    color: white;
     font-weight: lighter;
 }
 
@@ -217,9 +250,9 @@ body{
         z-index: 0;
     }
 
-    .container .display-4{
+    .jumbotron .container h1{
         /* color: white !important; */
-        font-size: 62px;
+        font-size: 75px;
         margin-top: 40px;
         text-shadow: 1px 1px 1px grey;
         
@@ -229,16 +262,30 @@ body{
     font-weight: 500; 
     }
 
+    .teks h4{
+        margin-top: 0px;
+        font-size: 45px;
+    }
+    .present-logo{
+        height: 75px;
+    }
+
+    .testi h1{
+        font-size: 75px;
+    }
     .teks {
         margin-top: 70px;
         /* text-align: left; */
     }
-
+    .teks p{
+        font-size: 20px;
+        /* text-align: left; */
+    }
   /* testi */
     .testi .card-left{
-        margin-right: 10%;
+        padding-left: 2.5%;
     }
     .testi .card-right{
-        margin-right: 10%;
+        padding-right: 2.5%;
     }
 }
